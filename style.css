@@ -157,7 +157,7 @@ header {
 
     .nav-container ul {
         flex-direction: column; /* Navigačný panel bude pod sebou */
-        gap: 5px;
+        gap: 0;
     }
 
     .name-container a h1 {
