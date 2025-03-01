@@ -174,7 +174,7 @@ header {
     }
 
     .nav-container ul li {
-        margin: 0;
+        margin: 10px;
         padding: 0;
     }
 
@@ -277,9 +277,10 @@ header {
 
     /* Zvýšenie marginu pre lepší odstup od navigačného panela */
     .portfolio {
-        margin-top: 120px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
-    } padding-top: 120px;
-}
+        margin-top: 120px;
+        padding-top: 120px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
+        }
+    }
 
 @media (max-width: 480px) {
     .portfolio-container {
