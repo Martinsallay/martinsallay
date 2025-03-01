@@ -164,7 +164,7 @@ header {
 
     /* Meno */
     .name-container a h1 {
-        font-size: 36px; /* Zmenšíme veľkosť písma na mobiloch */
+        font-size: 37px; /* Zmenšíme veľkosť písma na mobiloch */
     }
 
     /* Navigačný panel pod menom */
@@ -279,7 +279,7 @@ header {
     /* Zvýšenie marginu pre lepší odstup od navigačného panela */
     .portfolio {
         margin-top: 12px;
-        padding-top: 2250px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
+        padding-top: 2500px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
         }
     }
 
