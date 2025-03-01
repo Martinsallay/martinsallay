@@ -1,0 +1,110 @@
+/* Základné nastavenia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Hlavný header */
+header {
+    background-color: #000;
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Kontajner pre meno a navigáciu */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Meno je v strede */
+.name-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.name-container a h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-right: 30px;
+}
+
+/* Navigačný panel po pravej strane */
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-container a:hover {
+    color: #f5a623;
+}
+
+/* Hlavná sekcia so zobrazením fotky */
+.main-section {
+    width: 100%;
+    height: 100vh; /* Pokryje celú výšku obrazovky */
+    background-image: url('images/photo3.jpg'); /* Zadaj cestu k tvojej fotke */
+    background-size: cover; /* Fotka bude vyplňať celú šírku a výšku */
+    background-position: center center; /* Fotka bude centrovaná */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Obsahová sekcia */
+.content-section {
+    z-index: 1; /* Obsah bude nad fotkou */
+}
+
+/* Prehľadnejšie nastavenia pre text */
+.content-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 20px;
+}
+.hero-image {
+    width: cover;
+    height: cover;
+    max-height: 100vh; /* Udrží fotku v rámci výšky obrazovky */
+}
