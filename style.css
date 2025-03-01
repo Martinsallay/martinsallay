@@ -25,6 +25,7 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
+    
 }
 
 /* Kontajner pre meno a navigáciu */
@@ -33,6 +34,8 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
+    
+
 }
 
 /* Meno je v strede */
@@ -87,6 +90,9 @@ header {
     align-items: center;
     text-align: center;
     color: white;
+    
+    
+    
 }
 
 /* Obsahová sekcia */
@@ -175,16 +181,19 @@ header {
 }/* Štýly pre celú sekciu portfólia */
 .portfolio {
     width: 100%;
-    padding: 50px 20px;
+    padding: 20px 20px;
     background-color: #000;
     color: white;
+    margin-top: 0;  /* Zrušiť veľkú medzeru medzi sekciami */
+    margin-bottom: 20px; 
+    
     
 }
 
 .portfolio h2 {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 /* Kontajner pre mriežku portfólia */
@@ -194,7 +203,7 @@ header {
     flex-wrap: wrap;
     justify-content: center; /* Zarovná obrázky na stred */
     gap: 20px; /* Medzera medzi položkami */
-    padding: 0 20px;
+   
 }
 
 /* Každá položka */
@@ -269,7 +278,7 @@ header {
     /* Zvýšenie marginu pre lepší odstup od navigačného panela */
     .portfolio {
         margin-top: 120px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
-    }
+    } padding-top: 120px;
 }
 
 @media (max-width: 480px) {
