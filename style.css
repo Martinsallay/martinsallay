@@ -203,8 +203,8 @@ header {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 250px; /* Fixná šírka pre všetky obrázky */
-    height: 200px; /* Fixná výška pre všetky obrázky */
+    width: 400px; /* Fixná šírka pre všetky obrázky */
+    height: 500px; /* Fixná výška pre všetky obrázky */
 }
 
 /* Odkazy, aby bol celý blok klikateľný */
