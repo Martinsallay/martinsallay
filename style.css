@@ -150,18 +150,25 @@ header {
 
 /* Úprava pre mobilné zariadenia */
 @media (max-width: 768px) {
+    /* Meno bude vycentrované */
     .header-container {
-        flex-direction: column; /* Pre mobilné zariadenia bude menu aj meno pod sebou */
-        align-items: center;    /* Zarovnáme všetko do stredu */
+        flex-direction: column;
+        align-items: center; /* Zarovná meno aj navigáciu na stred */
     }
 
-    .nav-container ul {
-        flex-direction: row; /* Navigačný panel bude pod sebou */
-        gap: 10px;
-    }
-
+    /* Meno */
     .name-container a h1 {
-        font-size: 36px;  /* Zmenšime písmo na mobiloch */
+        font-size: 36px; /* Zmenšíme veľkosť písma na mobiloch */
     }
 
+    /* Navigačný panel pod menom */
+    .nav-container ul {
+        flex-direction: row; /* Umiestni navigáciu vedľa seba */
+        gap: 20px; /* Nastavíme medzeru medzi položkami */
+    }
+
+    .nav-container ul li {
+        margin: 0;
+        padding: 0;
+    }
 }
