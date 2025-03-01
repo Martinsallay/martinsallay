@@ -115,7 +115,7 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* V desktopovej verzii bude medzi menom a navigáciou medzera */
+    justify-content: center; /* V desktopovej verzii bude medzi menom a navigáciou medzera */
     width: 100%;
 }
 
