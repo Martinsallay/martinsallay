@@ -279,7 +279,7 @@ header {
     /* Zvýšenie marginu pre lepší odstup od navigačného panela */
     .portfolio {
         margin-top: 12px;
-        padding-top: 2050px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
+        padding-top: 2250px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
         }
     }
 
