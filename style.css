@@ -231,6 +231,16 @@ header {
     .portfolio-container {
         grid-template-columns: 1fr 1fr; /* Na mobiloch budú 2 stĺpce */
     }
+
+    /* Upravenie pre najmenšie obrazovky */
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Na veľmi malých obrazovkách bude len 1 stĺpec */
+    }
+
+    /* Zvýšenie marginu pre lepší odstup od navigačného panela */
+    .portfolio {
+        margin-top: 120px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
+    }
 }
 
 @media (max-width: 480px) {
