@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="name-container">
+                <a href="index.html"><h1>MARTIN SALLAY</h1></a>
+            </div>
+            <nav class="nav-container">
+                <ul>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Kontajner pre obsah stránky -->
+    <main>
+            <section class="portfolio">
+            <h2>CARS</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <a href="cars.html">
+                        <img src="images/photo1.jpg" alt="CARS">
+                        <div class="overlay">CARS</div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="pets.html">
+                        <img src="images/photo2.jpg" alt="PETS">
+                        <div class="overlay">PETS</div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="portraits.html">
+                        <img src="images/photo3.jpg" alt="PORTRAITS">
+                        <div class="overlay">PORTRAITS</div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="products.html">
+                        <img src="images/und.jpg" alt="PRODUCTS">
+                        <div class="overlay">PRODUCTS</div>
+                    </a>
+                </div>
+            </div>
+                <!-- Môžeš pridať ďalšie obrázky podľa potreby -->
+            </div>
+        </section>
+    </main>
+</body>
+<script src="path/to/your/script.js"></script><!-- Vaša HTML štruktúra -->
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Pre každý .portfolio-item priradíme touch udalosti
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        portfolioItems.forEach(item => {
+            item.addEventListener('touchstart', () => {
+                item.classList.add('active'); // Pridáme 'active' triedu pri dotyku
+            });
+
+            item.addEventListener('touchend', () => {
+                item.classList.remove('active'); // Odstránime 'active' triedu po dotyku
+            });
+        });
+    });
+</script>
+</html>
