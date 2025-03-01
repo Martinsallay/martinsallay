@@ -107,4 +107,36 @@ header {
     width: cover;
     height: cover;
     max-height: 100vh; /* Udrží fotku v rámci výšky obrazovky */
+}/* Responzívne nastavenia pre mobilné zariadenia */
+@media (max-width: 768px) {
+    /* Hlavný header - prispôsobenie výšky */
+    header {
+        padding: 10px 0;
+    }
+
+    /* Zarovnanie názvu a navigácie pod seba */
+    .header-container {
+        flex-direction: column;
+    }
+
+    .name-container a h1 {
+        font-size: 32px; /* Menšie písmo na mobiloch */
+        margin-bottom: 10px;
+    }
+
+    .nav-container ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Hlavná sekcia s obrázkom - úprava výšky */
+    .main-section {
+        height: 90vh; /* Nech nezaberie celú obrazovku */
+        background-size: contain; /* Aby sa fotka nerozťahovala */
+    }
+
+    /* Navigačné odkazy - zväčšenie medzier */
+    .nav-container a {
+        font-size: 16px;
+    }
 }
