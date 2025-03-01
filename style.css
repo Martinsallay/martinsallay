@@ -104,16 +104,17 @@ header {
     font-size: 20px;
 }
 .hero-image {
-    width: cover;
-    height: cover;
-    max-height: 100vh; /* Udrží fotku v rámci výšky obrazovky */
-}/* Responzívne nastavenia pre mobilné zariadenia */
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+/* Responzívne nastavenia pre mobilné zariadenia */
 @media (max-width: 768px) {
     /* Hlavný header - prispôsobenie výšky */
     header {
         padding: 10px 0;
     }
-
     /* Zarovnanie názvu a navigácie pod seba */
     .header-container {
         flex-direction: column;
