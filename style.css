@@ -273,13 +273,16 @@ header {
 .portfolio-item:active .overlay {
     opacity: 1; /* Zobrazenie overlay pri dotyku */
 }
-/* Efekt pri dotyku na mobiloch */
+/* Efekt pre obrázok pri dotyku */
 .portfolio-item.hover-effect img {
     transform: scale(1.1); /* Zvýši obrázok pri dotyku */
+    transition: transform 0.3s ease; /* Hladký prechod */
 }
 
+/* Efekt pre overlay pri dotyku */
 .portfolio-item.hover-effect .overlay {
     opacity: 1; /* Zobrazí overlay pri dotyku */
+    transition: opacity 0.3s ease;
 }
 @media (max-width: 768px) {
     /* Efekt pri dotyku na mobiloch */
