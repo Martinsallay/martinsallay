@@ -111,34 +111,55 @@ header {
 }
 
 /* Responzívne nastavenia pre mobilné zariadenia */
-@media (max-width: 768px) {
-    /* Hlavný header - prispôsobenie výšky */
-    header {
-        padding: 10px 0;
-    }
-    /* Zarovnanie názvu a navigácie pod seba */
-    .header-container {
-        flex-direction: column;
-    }
+/* Základné nastavenia pre menu a meno */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* V desktopovej verzii bude medzi menom a navigáciou medzera */
+    width: 100%;
+}
 
-    .name-container a h1 {
-        font-size: 32px; /* Menšie písmo na mobiloch */
-        margin-bottom: 10px;
+/* Navigačný panel po pravej strane */
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-container a:hover {
+    color: #f5a623;
+}
+
+/* Úprava pre mobilné zariadenia */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Pre mobilné zariadenia bude menu aj meno pod sebou */
+        align-items: center;    /* Zarovnáme všetko do stredu */
     }
 
     .nav-container ul {
-        flex-direction: column;
+        flex-direction: column; /* Navigačný panel bude pod sebou */
         gap: 15px;
     }
 
-    /* Hlavná sekcia s obrázkom - úprava výšky */
-    .main-section {
-        height: 90vh; /* Nech nezaberie celú obrazovku */
-        background-size: contain; /* Aby sa fotka nerozťahovala */
+    .name-container a h1 {
+        font-size: 36px;  /* Zmenšime písmo na mobiloch */
     }
 
-    /* Navigačné odkazy - zväčšenie medzier */
-    .nav-container a {
-        font-size: 16px;
-    }
 }
