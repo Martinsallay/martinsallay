@@ -60,7 +60,7 @@ header {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 0;
+    gap: 30px;
     margin: 0;
 }
 
