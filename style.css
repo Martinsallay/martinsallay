@@ -178,6 +178,7 @@ header {
     padding: 50px 20px;
     background-color: #000;
     color: white;
+    
 }
 
 .portfolio h2 {
@@ -187,45 +188,73 @@ header {
 }
 
 /* Kontajner pre mriežku portfólia */
+/* Kontajner pre mriežku portfólia - zarovnané na stred */
 .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Zabezpečí flexibilné stĺpce */
-    gap: 20px; /* Medzera medzi obrázkami */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Zarovná obrázky na stred */
+    gap: 20px; /* Medzera medzi položkami */
     padding: 0 20px;
 }
 
-/* Každá položka v portfóliu */
+/* Každá položka */
 .portfolio-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px; /* Okrúhly okraj */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Jemný tieň okolo obrázku */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 250px; /* Fixná šírka pre všetky obrázky */
+    height: 200px; /* Fixná výška pre všetky obrázky */
 }
 
-/* Obrázky v portfóliu */
-.portfolio-item img {
-    width: 100%; /* Obrázok bude roztiahnutý na celú šírku kontajnera */
+/* Odkazy, aby bol celý blok klikateľný */
+.portfolio-item a {
+    display: block;
+    width: 100%;
     height: 100%;
-    object-fit: cover; /* Zabezpečí, že obrázok neprekrýva kontajner a neťahá sa */
-    transition: transform 0.3s ease; /* Prechod pri pohybe myši */
+    text-decoration: none;
+    position: relative;
 }
 
-/* Efekt pri prechode myšou */
+/* Obrázky */
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Efekt pri hover */
 .portfolio-item:hover img {
-    transform: scale(1.1); /* Trochu zväčší obrázok pri hover */
+    transform: scale(1.1);
 }
 
-.portfolio-item:hover::after {
-    content: 'Kliknite na obrázok';
+/* Overlay text */
+.overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     color: white;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 18px;
     font-weight: bold;
-    opacity: 0.8;
+    text-align: center;
+    padding: 10px;
+    pointer-events: none; /* Zabezpečí, že kliknutie ide na <a> */
+}
+
+/* Pri hover sa overlay zobrazí */
+.portfolio-item:hover .overlay {
+    opacity: 1;
+
 }
 @media (max-width: 768px) {
     .portfolio-container {
