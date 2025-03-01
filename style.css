@@ -184,8 +184,9 @@ header {
     padding: 20px 20px;
     background-color: #000;
     color: white;
-    margin-top: 120px; /* Zvýšený margin pre mobilné zariadenia */
-    padding-top: 120px; 
+    margin-top: 1px; /* Zvýšený margin pre mobilné zariadenia */
+    padding-bottom: 100px; 
+
     
     
 }
@@ -213,7 +214,7 @@ header {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 400px; /* Fixná šírka pre všetky obrázky */
-    height: 500px; /* Fixná výška pre všetky obrázky */
+    height: 600px; /* Fixná výška pre všetky obrázky */
 }
 
 /* Odkazy, aby bol celý blok klikateľný */
@@ -277,8 +278,8 @@ header {
 
     /* Zvýšenie marginu pre lepší odstup od navigačného panela */
     .portfolio {
-        margin-top: 120px;
-        padding-top: 120px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
+        margin-top: 12px;
+        padding-top: 1550px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
         }
     }
 
