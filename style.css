@@ -267,6 +267,14 @@ header {
 
 }
 @media (max-width: 768px) {
+    /* Efekt pri dotyku na mobiloch */
+.portfolio-item:active img {
+    transform: scale(1.1); /* Efekt pri dotyku */
+}
+
+.portfolio-item:active .overlay {
+    opacity: 1; /* Zobrazenie overlay pri dotyku */
+}
     .portfolio-container {
         grid-template-columns: 1fr 1fr; /* Na mobiloch budú 2 stĺpce */
     }
@@ -279,7 +287,7 @@ header {
     /* Zvýšenie marginu pre lepší odstup od navigačného panela */
     .portfolio {
         margin-top: 12px;
-        padding-top: 2000px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
+        padding-top: 2020px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
         }
     }
 
