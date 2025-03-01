@@ -56,5 +56,22 @@
             </div>
         </section>
     </main>
+</body><!-- Vaša HTML štruktúra -->
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Pre každý .portfolio-item priradíme touch udalosti
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        portfolioItems.forEach(item => {
+            item.addEventListener('touchstart', () => {
+                item.classList.add('active'); // Pridáme 'active' triedu pri dotyku
+            });
+
+            item.addEventListener('touchend', () => {
+                item.classList.remove('active'); // Odstránime 'active' triedu po dotyku
+            });
+        });
+    });
+</script>
 </html>
