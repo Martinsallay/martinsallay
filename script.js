@@ -17,3 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.addEventListener('touchstart', () => {
+        item.classList.add('hover-effect'); // Pridá efekt hover pri dotyku
+    });
+    item.addEventListener('touchend', () => {
+        item.classList.remove('hover-effect'); // Odstráni efekt, keď dotyk skončí
+    });
+});
