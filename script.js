@@ -18,10 +18,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 document.querySelectorAll('.portfolio-item').forEach(item => {
+    // Pri dotyku na položku
     item.addEventListener('touchstart', () => {
         item.classList.add('hover-effect'); // Pridá efekt hover pri dotyku
     });
+
+    // Pri skončení dotyku na položke
     item.addEventListener('touchend', () => {
         item.classList.remove('hover-effect'); // Odstráni efekt, keď dotyk skončí
+    });
+
+    // Na desktopoch pre použitie hover efektu (ak chcete aj na desktop)
+    item.addEventListener('mouseenter', () => {
+        item.classList.add('hover-effect'); // Pridá efekt hover pri prechode myšou
+    });
+
+    item.addEventListener('mouseleave', () => {
+        item.classList.remove('hover-effect'); // Odstráni efekt pri opustení myšou
     });
 });
