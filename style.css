@@ -172,4 +172,69 @@ header {
         padding: 0;
     }
 
+}/* Štýly pre celú sekciu portfólia */
+.portfolio {
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #000;
+    color: white;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Kontajner pre mriežku portfólia */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Zabezpečí flexibilné stĺpce */
+    gap: 20px; /* Medzera medzi obrázkami */
+    padding: 0 20px;
+}
+
+/* Každá položka v portfóliu */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Okrúhly okraj */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Jemný tieň okolo obrázku */
+}
+
+/* Obrázky v portfóliu */
+.portfolio-item img {
+    width: 100%; /* Obrázok bude roztiahnutý na celú šírku kontajnera */
+    height: 100%;
+    object-fit: cover; /* Zabezpečí, že obrázok neprekrýva kontajner a neťahá sa */
+    transition: transform 0.3s ease; /* Prechod pri pohybe myši */
+}
+
+/* Efekt pri prechode myšou */
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Trochu zväčší obrázok pri hover */
+}
+
+.portfolio-item:hover::after {
+    content: 'Kliknite na obrázok';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0.8;
+}
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr 1fr; /* Na mobiloch budú 2 stĺpce */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Na veľmi malých obrazovkách bude len 1 stĺpec */
+    }
 }
