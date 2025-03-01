@@ -184,8 +184,8 @@ header {
     padding: 20px 20px;
     background-color: #000;
     color: white;
-    margin-top: 0;  /* Zrušiť veľkú medzeru medzi sekciami */
-    margin-bottom: 20px; 
+    margin-top: 120px; /* Zvýšený margin pre mobilné zariadenia */
+    padding-top: 120px; 
     
     
 }
