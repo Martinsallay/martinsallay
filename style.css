@@ -171,4 +171,43 @@ header {
         margin: 0;
         padding: 0;
     }
+}/* Portfolio sekcia */
+.portfolio {
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #000;
+    color: white;
+}
+
+/* Kontajner pre portfólio */
+.portfolio-container {
+    display: flex; /* Zabezpečí, že položky budú vedľa seba */
+    overflow-x: auto; /* Umožní horizontálne rolovanie */
+    gap: 20px; /* Medzera medzi položkami */
+    padding-bottom: 20px; /* Pridáme trochu priestoru na spodok */
+}
+
+/* Každý priečinok s fotkou */
+.portfolio-item {
+    min-width: 300px; /* Minimálna šírka pre každý priečinok */
+    height: 200px; /* Výška priečinka */
+    overflow: hidden;
+    border: 1px solid #fff; /* Ozdobný okraj okolo obrázkov */
+}
+
+.portfolio-item img {
+    width: 100%; /* Zabezpečí, že obrázok sa roztiahne na celú šírku */
+    height: 100%;
+    object-fit: cover; /* Zabezpečí, že obrázok neprekrýva kontajner */
+}
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column; /* Na mobiloch budú položky pod sebou */
+        gap: 15px; /* Menšia medzera medzi položkami */
+    }
+
+    .portfolio-item {
+        min-width: 100%; /* Na mobiloch necháme obrázky rozťahovať na celú šírku */
+        height: auto; /* Výška obrázkov sa prispôsobí */
+    }
 }
