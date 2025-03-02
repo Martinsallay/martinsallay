@@ -16,6 +16,39 @@ document.addEventListener("DOMContentLoaded", function() {
             targetSection.classList.remove("hidden");
         });
     });
+
+    const galleryContainer = document.getElementById('gallery-container');
+    const imageFolder = 'images/pets/';
+    const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+    // Funkcia na načítanie obrázkov
+    function loadImages() {
+        fetch(imageFolder)
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const htmlDoc = parser.parseFromString(data, 'text/html');
+                const imageElements = htmlDoc.querySelectorAll('a');
+
+                imageElements.forEach(element => {
+                    const href = element.getAttribute('href');
+                    if (imageExtensions.some(ext => href.endsWith(ext))) {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = `${imageFolder}${href}`;
+                        imgElement.alt = href;
+
+                        const galleryItem = document.createElement('div');
+                        galleryItem.classList.add('gallery-item');
+                        galleryItem.appendChild(imgElement);
+
+                        galleryContainer.appendChild(galleryItem);
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching images:', error));
+    }
+
+    loadImages();
 });
 document.querySelectorAll('.portfolio-item').forEach(item => {
     // Pri dotyku na položku
