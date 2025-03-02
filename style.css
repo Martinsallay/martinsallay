@@ -97,7 +97,7 @@ header {
 }
 .hero-image {
     width: 100%; /* Na mobiloch aj desktopoch sa obrázok roztiahne na celú šírku */
-    height: 100vh; /* Obrázok bude mať výšku celej obrazovky */
+    height: 80vh; /* Obrázok bude mať výšku celej obrazovky */
     object-fit: cover; /* Obrázok vyplní celú obrazovku a neprekrýva sa */
     display: block; /* Zabezpečí, že obrázok bude správať správne s blokovými prvkami */
 }
