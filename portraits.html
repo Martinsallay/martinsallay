@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martin Sallay</title>
+    <title>Martin Sallay - Portraits</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -25,21 +25,60 @@
 
     <!-- Kontajner pre obsah stránky -->
     <main>
-        <section class="main-section">
-            <div class="content-section">
-                <picture>
-                    <source srcset="images/photomobile1.jpg" media="(max-width: 768px)">
-                    <img src="images/titul1.jpg" alt="Fotka na úvod" class="hero-image">
-                </picture>
+        <section class="portfolio">
+            <h2>PORTRAITS</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <a href="portraits1.html">
+                        <img src="images/portrait1.jpg" alt="PORTRAIT 1">
+                        <div class="overlay">PORTRAIT 1</div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="portraits2.html">
+                        <img src="images/portrait2.jpg" alt="PORTRAIT 2">
+                        <div class="overlay">PORTRAIT 2</div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="portraits3.html">
+                        <img src="images/portrait3.jpg" alt="PORTRAIT 3">
+                        <div class="overlay">PORTRAIT 3</div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="portraits4.html">
+                        <img src="images/portrait4.jpg" alt="PORTRAIT 4">
+                        <div class="overlay">PORTRAIT 4</div>
+                    </a>
+                </div>
             </div>
+            <!-- Môžeš pridať ďalšie obrázky podľa potreby -->
         </section>
     </main>
     <footer>
         <div class="footer-container">
-            <a href="https://www.instagram.com/martin.sallay" target="_blank">
+            <a href="https://www.instagram.com/yourusername" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
     </footer>
+    <script src="path/to/your/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Pre každý .portfolio-item priradíme touch udalosti
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            portfolioItems.forEach(item => {
+                item.addEventListener('touchstart', () => {
+                    item.classList.add('active'); // Pridáme 'active' triedu pri dotyku
+                });
+
+                item.addEventListener('touchend', () => {
+                    item.classList.remove('active'); // Odstránime 'active' triedu po dotyku
+                });
+            });
+        });
+    </script>
 </body>
 </html>
