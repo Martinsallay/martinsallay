@@ -6,6 +6,7 @@
     <title>MS Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -24,8 +25,8 @@
 
     <!-- Kontajner pre obsah stránky -->
     <main>
-            <section class="portfolio">
-            <h2>Portfolio</h2>
+        <section class="portfolio">
+            <h2>PORTFOLIO</h2>
             <div class="portfolio-container">
                 <div class="portfolio-item">
                     <a href="cars.html">
@@ -52,27 +53,32 @@
                     </a>
                 </div>
             </div>
-                <!-- Môžeš pridať ďalšie obrázky podľa potreby -->
-            </div>
+            <!-- Môžeš pridať ďalšie obrázky podľa potreby -->
         </section>
     </main>
-</body>
-<script src="path/to/your/script.js"></script><!-- Vaša HTML štruktúra -->
-</body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Pre každý .portfolio-item priradíme touch udalosti
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        
-        portfolioItems.forEach(item => {
-            item.addEventListener('touchstart', () => {
-                item.classList.add('active'); // Pridáme 'active' triedu pri dotyku
-            });
+    <footer>
+        <div class="footer-container">
+            <a href="https://www.instagram.com/martin.sallay" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="path/to/your/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Pre každý .portfolio-item priradíme touch udalosti
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            portfolioItems.forEach(item => {
+                item.addEventListener('touchstart', () => {
+                    item.classList.add('active'); // Pridáme 'active' triedu pri dotyku
+                });
 
-            item.addEventListener('touchend', () => {
-                item.classList.remove('active'); // Odstránime 'active' triedu po dotyku
+                item.addEventListener('touchend', () => {
+                    item.classList.remove('active'); // Odstránime 'active' triedu po dotyku
+                });
             });
         });
-    });
-</script>
+    </script>
+</body>
 </html>
