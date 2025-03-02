@@ -59,8 +59,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     galleryItems.forEach(item => {
         item.addEventListener('click', function() {
-            popup.style.display = 'block';
+            popup.style.display = 'flex';
             popupImage.src = this.src;
+
+            // Pridáme triedu podľa orientácie obrázka
+            if (this.naturalWidth > this.naturalHeight) {
+                popupImage.classList.add('landscape');
+                popupImage.classList.remove('portrait');
+            } else {
+                popupImage.classList.add('portrait');
+                popupImage.classList.remove('landscape');
+            }
         });
     });
 
