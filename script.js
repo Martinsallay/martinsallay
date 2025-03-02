@@ -51,6 +51,28 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     loadImages();
+
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const popup = document.getElementById('image-popup');
+    const popupImage = document.getElementById('popup-image');
+    const closeBtn = document.querySelector('.image-popup .close');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            popup.style.display = 'block';
+            popupImage.src = this.src;
+        });
+    });
+
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    popup.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
 });
 
 document.querySelectorAll('.portfolio-item').forEach(item => {
