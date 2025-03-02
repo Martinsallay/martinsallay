@@ -96,10 +96,11 @@ header {
     font-size: 20px;
 }
 .hero-image {
-    width: 100%; /* Na mobiloch aj desktopoch sa obrázok roztiahne na celú šírku */
-    height: 80vh; /* Obrázok bude mať výšku celej obrazovky */
-    object-fit: cover; /* Obrázok vyplní celú obrazovku a neprekrýva sa */
-    display: block; /* Zabezpečí, že obrázok bude správať správne s blokovými prvkami */
+    width: 100%; /* Zmenšíme šírku obrázka na 100% */
+    height: auto; /* Zachováme pomer strán obrázka */
+    max-width: 1700px; /* Nastavíme maximálnu šírku obrázka */
+    margin: 0 auto; /* Vycentrujeme obrázok */
+    display: block; /* Zabezpečíme, že obrázok bude správať správne s blokovými prvkami */
 }
 
 /* Responzívne nastavenia pre mobilné zariadenia */
@@ -330,15 +331,34 @@ header {
 .footer-container {
     text-align: center;
     padding: 20px;
-   background-color: #000000;
+    background-color: #000000;
 }
 
 .footer-container a {
     color: #ffffff;
     font-size: 36px;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 .footer-container a:hover {
     color: #0073e6;
+}
+
+.about-me {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.about-me h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
 }
