@@ -369,7 +369,7 @@ header {
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    padding-top: 1100px;
+padding-top: 1100px;
 }
 
 .gallery-item {
@@ -385,6 +385,7 @@ header {
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+    cursor: pointer; /* Pridáme kurzor na ukazovateľ */
 }
 
 .gallery-item:hover img {
@@ -402,5 +403,50 @@ header {
     .gallery-item {
         flex: 1 1 100%; /* Jeden stĺpec na veľmi malých obrazovkách */
         max-width: 100%;
+    }
+}
+
+/* Štýly pre popup obrázky */
+.image-popup {
+    display: none; /* Skryté predvolene */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.image-popup .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.image-popup .close:hover,
+.image-popup .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-popup .popup-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+@media (max-width: 700px) {
+    .image-popup .popup-content {
+        width: 100%;
     }
 }
