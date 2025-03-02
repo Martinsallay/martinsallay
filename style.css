@@ -78,22 +78,8 @@ header {
     color: #f5a623;
 }
 
-/* Hlavná sekcia so zobrazením fotky */
-.main-section {
-    width: 100%;
-    height: 100vh; /* Pokryje celú výšku obrazovky */
-    background-image: url('images/photo3.jpg'); /* Zadaj cestu k tvojej fotke */
-    background-size: cover; /* Fotka bude vyplňať celú šírku a výšku */
-    background-position: center center; /* Fotka bude centrovaná */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    
-    
-    
-}
+
+
 
 /* Obsahová sekcia */
 .content-section {
@@ -307,4 +293,52 @@ header {
     .portfolio-container {
         grid-template-columns: 1fr; /* Na veľmi malých obrazovkách bude len 1 stĺpec */
     }
+}
+
+/* Optimalizácia pre MacBook Pro 14 */
+@media (min-width: 1440px) {
+    .portfolio {
+        margin-top: 12px;
+        padding-top: 20px; /* Zvýšený margin pre mobilné zariadenia, aby neboli obrázky pod menu */
+        }
+    .portfolio-container {
+        grid-template-columns: 1fr 1fr 1fr; /* Na väčších obrazovkách budú 3 stĺpce */
+    }
+
+    .portfolio-item {
+        width: 300px; /* Fixná šírka pre všetky obrázky */
+        height: 450px; /* Fixná výška pre všetky obrázky */
+    }
+
+    .portfolio h2 {
+        font-size: 48px; /* Väčší text pre nadpis */
+    }
+
+    .portfolio-item img {
+        transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+        transform: scale(1.05); /* Mierne zväčšenie pri hover */
+    }
+
+    .portfolio-item .overlay {
+        font-size: 24px; /* Väčší text pre overlay */
+    }
+}
+
+.footer-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+}
+
+.footer-container a {
+    color: #ffffff;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    color: #0073e6;
 }
