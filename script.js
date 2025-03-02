@@ -23,33 +23,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Funkcia na načítanie obrázkov
     function loadImages() {
-        fetch(imageFolder)
-            .then(response => response.text())
-            .then(data => {
-                const parser = new DOMParser();
-                const htmlDoc = parser.parseFromString(data, 'text/html');
-                const imageElements = htmlDoc.querySelectorAll('a');
+        let imageIndex = 1;
+        let imageFound = true;
 
-                imageElements.forEach(element => {
-                    const href = element.getAttribute('href');
-                    if (imageExtensions.some(ext => href.endsWith(ext))) {
-                        const imgElement = document.createElement('img');
-                        imgElement.src = `${imageFolder}${href}`;
-                        imgElement.alt = href;
+        while (imageFound) {
+            imageFound = false;
+            imageExtensions.forEach(extension => {
+                const imgElement = new Image();
+                imgElement.src = `${imageFolder}pet${imageIndex}.${extension}`;
+                imgElement.alt = `PET ${imageIndex}`;
 
-                        const galleryItem = document.createElement('div');
-                        galleryItem.classList.add('gallery-item');
-                        galleryItem.appendChild(imgElement);
+                imgElement.onload = function() {
+                    imageFound = true;
+                    const galleryItem = document.createElement('div');
+                    galleryItem.classList.add('gallery-item');
+                    galleryItem.appendChild(imgElement);
+                    galleryContainer.appendChild(galleryItem);
+                };
 
-                        galleryContainer.appendChild(galleryItem);
-                    }
-                });
-            })
-            .catch(error => console.error('Error fetching images:', error));
+                imgElement.onerror = function() {
+                    // Ak obrázok nie je nájdený, pokračujeme na ďalší
+                    imgElement.remove();
+                };
+            });
+            imageIndex++;
+        }
     }
 
     loadImages();
 });
+
 document.querySelectorAll('.portfolio-item').forEach(item => {
     // Pri dotyku na položku
     item.addEventListener('touchstart', () => {
